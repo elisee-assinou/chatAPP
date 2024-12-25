@@ -7,11 +7,12 @@ import {MessageStatus} from '../types/MessageStatus';
 export class MessageEntity {
   /**
    * The constructor of the message class
+   * @param id the id of the message
    * @param content The content of the message
    * @param createdAt The date the message was sent
    * @param status  The status of the message (e.g., 'sent', 'delivered', 'read')
    */
-  constructor(public content: string, public createdAt: Date, public status:MessageStatus) {}
+  constructor(public content: string, public createdAt: Date= new Date(), public status:MessageStatus, public id?:string) {}
 
   /** function to convert the message object to a string
    * @returns a representation of the message object as a string
@@ -34,7 +35,7 @@ export class MessageEntity {
 
   /**
    * function to update the status of the message
-   * @param status The new status of the message
+   * @param newStatus The new status of the message
    */
   updateStatus(newStatus: MessageStatus): void {
     if (this.status === newStatus) {

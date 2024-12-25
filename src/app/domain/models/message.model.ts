@@ -2,7 +2,7 @@ import {MessageEntity} from '../entities/message.entity';
 import {MessageDTO} from '../types/MessageDTO';
 
 /**
- *Message model used to convert the message object to a message entity and DTO
+ *sendMessage model used to convert the message object to a message entity and DTO
  */
 
 export class MessageModel {
